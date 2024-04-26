@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+
+            form {
+                width: 400px;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px
+                    rgba(0, 0, 0, 0.1);
+            }
+
+            fieldset {
+                border: 1px solid black;
+                padding: 10px;
+                margin: 0;
+            }
+
+            legend {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            textarea,
+            input[type="date"] {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            input[type="radio"] {
+                margin-left: 20px;
+            }
+
+            input[type="submit"] {
+                padding: 10px 20px;
+
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <!-- The <fieldset> tag draws a box around the related elements. -->
+      <fieldset>
+        <!-- The <legend> tag is used specifically within the <fieldset> element in HTML forms -->
+        <legend>User personal information</legend>
+        <div class="input-box" id="fullName">
+          <label>Enter your full name</label>
+          <input type="text" name="name" />
+        </div>
+        <div class="input-box" id="userEmail">
+          <label>Enter your email</label> <input type="email" name="email" />
+        </div>
+        <div class="input-box" id="userPassword">
+          <label>Enter your password</label>
+          <input type="password" name="pass" />
+        </div>
+        <div class="input-box" id="confirmUserPassword">
+          <label>Confirm your password</label>
+          <input type="password" name="confirmPassword" />
+        </div>
+        <!-- example for using id if you want to change the formatting of radio buttons from row to column -->
+        <div class="input-box" id="userGender">
+          <label>Enter your gender</label>
+          <!-- inline : span -->
+          <!-- <span>
+            <input type="radio" name="gender" value="others" />
+            Others
+          </span>
+          <span>
+            <input type="radio" name="gender" value="female" />
+            Female
+          </span>
+          <span>
+            <input type="radio" name="gender" value="male" />
+            Male
+          </span> -->
+
+          <!-- difference between using block vs inline tags -->
+          <!-- block: div -->
+          <div>
+            <input type="radio" name="gender" value="others" />
+            <!-- <span>Others</span> -->
+            Others
+          </div>
+          <div>
+            <input type="radio" name="gender" value="female" />
+            <!-- <span>Female</span> -->
+            Female
+          </div>
+          <div>
+            <input type="radio" name="gender" value="male" />
+            <!-- <span>Male</span> -->
+            Male
+          </div>
+        </div>
+        <div class="input-box" id="userDOB">
+          <label>Enter your Date of Birth</label>
+          <input type="date" name="dob" />
+        </div>
+        <div class="input-box" id="userAdress">
+          <label>Enter your Address:</label>
+          <textarea name="address"></textarea>
+        </div>
+
+        <input type="submit" value="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
